@@ -9,9 +9,9 @@ import { WaveDivider } from "@/components/site/WaveDivider";
 export const Route = createFileRoute("/over")({
   head: () => ({
     meta: [
-      { title: "Over Rosi — Het verhaal van Fay" },
+      { title: "Over Rosi | Het verhaal van Fay" },
       { name: "description", content: "Fay Roos opende Lunchroom Rosi op Koningsdag 2026 in haar geboorteplaats Monster. Lees hoe het begon en waar de naam vandaan komt." },
-      { property: "og:title", content: "Over Rosi — Het verhaal van Fay" },
+      { property: "og:title", content: "Over Rosi | Het verhaal van Fay" },
       { property: "og:description", content: "Het verhaal achter Lunchroom Rosi in Monster." },
       { property: "og:url", content: "/over" },
     ],
@@ -47,7 +47,7 @@ function OverPage() {
           <p>
             Mijn naam is Fay. Ik ben drieëntwintig, geboren en getogen in
             Monster, en ik heb altijd al iets met eten gehad. Niet ingewikkeld
-            of chef-achtig — gewoon: koken voor mensen die ik leuk vind.
+            of chef-achtig, gewoon: koken voor mensen die ik leuk vind.
           </p>
           <p>
             Op Koningsdag 2026 opende ik de deuren van Rosi. Een knus pand aan
@@ -76,7 +76,7 @@ function OverPage() {
               "Ik kook niet omdat het indrukwekkend moet zijn. Ik kook omdat
               ik wil dat mensen even thuiskomen, ook als ze net binnen zijn."
             </blockquote>
-            <p className="mt-4 text-sm uppercase tracking-[0.22em] text-muted-foreground">— Fay Roos</p>
+            <p className="mt-4 text-sm uppercase tracking-[0.22em] text-muted-foreground">Fay Roos</p>
           </Reveal>
         </div>
       </section>

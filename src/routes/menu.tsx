@@ -6,9 +6,9 @@ import { WaveDivider } from "@/components/site/WaveDivider";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menukaart — Lunchroom Rosi Monster" },
+      { title: "Menukaart | Lunchroom Rosi Monster" },
       { name: "description", content: "Vers belegde broodjes, soepen, salades, huisgemaakte taart en goede koffie. Bekijk de hele menukaart van Lunchroom Rosi in Monster." },
-      { property: "og:title", content: "Menukaart — Lunchroom Rosi" },
+      { property: "og:title", content: "Menukaart | Lunchroom Rosi" },
       { property: "og:description", content: "De volledige menukaart van Lunchroom Rosi in Monster." },
       { property: "og:url", content: "/menu" },
     ],
@@ -26,7 +26,7 @@ function MenuPage() {
           Vers, eerlijk, en <span className="italic text-primary">met liefde</span> gemaakt.
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
-          De kaart wisselt mee met de seizoenen. Vraag gerust naar de specials —
+          De kaart wisselt mee met de seizoenen. Vraag gerust naar de specials,
           die staan vaak met krijt op het bord boven de bar.
         </p>
         <WaveDivider className="mt-8 mx-auto max-w-[200px]" />
@@ -86,7 +86,7 @@ function MenuPage() {
         <div className="rounded-[28px] bg-card p-10 text-center">
           <h2 className="font-serif text-3xl text-foreground">Allergie of dieetwens?</h2>
           <p className="mx-auto mt-3 max-w-lg text-muted-foreground">
-            Laat het ons weten — we doen wat we kunnen om iets lekkers voor je
+            Laat het ons weten, we doen wat we kunnen om iets lekkers voor je
             te maken. Vegan, glutenvrij of lactosevrij is bijna altijd mogelijk.
           </p>
           <Link

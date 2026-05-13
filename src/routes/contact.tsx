@@ -7,9 +7,9 @@ import { WaveDivider } from "@/components/site/WaveDivider";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Lunchroom Rosi Monster" },
+      { title: "Contact | Lunchroom Rosi Monster" },
       { name: "description", content: "Adres, openingstijden, telefoonnummer en route naar Lunchroom Rosi aan de Choorstraat in Monster." },
-      { property: "og:title", content: "Contact — Lunchroom Rosi" },
+      { property: "og:title", content: "Contact | Lunchroom Rosi" },
       { property: "og:description", content: "Vind Rosi in Monster: adres, openingstijden en route." },
       { property: "og:url", content: "/contact" },
     ],
@@ -102,7 +102,7 @@ function ContactPage() {
               <h2 className="font-serif text-2xl text-foreground">Stuur een berichtje</h2>
               {sent ? (
                 <p className="text-sm text-muted-foreground">
-                  Je e-mailprogramma is geopend — verstuur de mail en we komen er bij je op terug.
+                  Je e-mailprogramma is geopend, verstuur de mail en we komen er bij je op terug.
                 </p>
               ) : (
                 <>
