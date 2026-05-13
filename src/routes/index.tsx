@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Lunchroom Rosi — Verse koffie & lunch in Monster" },
-      { name: "description", content: "Een knus hoekje in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, een warm welkom van Fay." },
+      { name: "description", content: "Een knus hoekje in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, en een warm welkom." },
       { property: "og:title", content: "Lunchroom Rosi — Monster" },
       { property: "og:description", content: "Verse koffie, lunch en huisgemaakt gebak in Monster." },
       { property: "og:url", content: "/" },
