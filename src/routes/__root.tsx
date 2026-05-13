@@ -62,7 +62,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Lunchroom Rosi — Verse koffie & lunch in Monster" },
-      { name: "description", content: "Lunchroom Rosi in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, een warm welkom van Fay." },
+      { name: "description", content: "Lunchroom Rosi in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, en een warm welkom." },
       { name: "theme-color", content: "#6B7A4A" },
       { property: "og:title", content: "Lunchroom Rosi — Monster" },
       { property: "og:description", content: "Een knus hoekje in Monster met verse koffie, lunch en huisgemaakt gebak." },
