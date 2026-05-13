@@ -14,9 +14,9 @@ import { Coffee, Leaf, Heart, Instagram } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lunchroom Rosi — Verse koffie & lunch in Monster" },
+      { title: "Lunchroom Rosi | Verse koffie & lunch in Monster" },
       { name: "description", content: "Een knus hoekje in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, en een warm welkom." },
-      { property: "og:title", content: "Lunchroom Rosi — Monster" },
+      { property: "og:title", content: "Lunchroom Rosi | Monster" },
       { property: "og:description", content: "Verse koffie, lunch en huisgemaakt gebak in Monster." },
       { property: "og:url", content: "/" },
     ],
@@ -29,17 +29,27 @@ function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative overflow-hidden">
-        <div className="container-prose grid gap-10 pt-10 pb-16 md:pt-16 md:pb-24 md:grid-cols-2 md:items-center">
+      <section className="relative overflow-hidden -mt-16 md:mt-0">
+        {/* Mobile: volledige achtergrond foto */}
+        <div className="absolute inset-0 md:hidden" aria-hidden="true">
+          <img
+            src={heroImg}
+            alt=""
+            className="h-full w-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/35 to-black/80" />
+        </div>
+
+        <div className="relative z-10 container-prose grid gap-10 min-h-[100svh] content-end pb-14 md:min-h-0 md:content-normal md:pt-16 md:pb-24 md:grid-cols-2 md:items-center">
           <div className="relative z-10">
-            <p className="text-xs uppercase tracking-[0.28em] text-primary/80">
+            <p className="text-xs uppercase tracking-[0.28em] text-white/70 md:text-primary/80">
               Lunchroom · Monster sinds 2026
             </p>
-            <h1 className="mt-5 font-serif text-5xl leading-[1.05] text-foreground sm:text-6xl md:text-7xl">
+            <h1 className="mt-5 font-serif text-5xl leading-[1.05] text-white md:text-foreground sm:text-6xl md:text-7xl">
               Een warm hoekje{" "}
-              <span className="italic text-primary">in het hart</span> van Monster.
+              <span className="italic text-white/85 md:text-primary">in het hart</span> van Monster.
             </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-md text-base leading-relaxed text-white/75 md:text-muted-foreground">
               Verse koffie, broodjes van de bakker om de hoek en taart die we
               die ochtend nog uit de oven haalden. Loop binnen, schuif aan,
               blijf even.
@@ -47,22 +57,22 @@ function HomePage() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 to="/menu"
-                className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm text-primary-foreground hover:bg-[color:var(--terracotta)] transition-colors"
+                className="inline-flex items-center rounded-full bg-white px-6 py-3 text-sm text-foreground hover:bg-white/90 md:bg-primary md:text-primary-foreground md:hover:bg-[color:var(--terracotta)] transition-colors"
               >
                 Bekijk de kaart
               </Link>
               <Link
                 to="/reserveren"
-                className="inline-flex items-center rounded-full border border-primary/30 bg-card px-6 py-3 text-sm text-foreground hover:border-primary transition-colors"
+                className="inline-flex items-center rounded-full border border-white/50 bg-white/10 backdrop-blur-sm px-6 py-3 text-sm text-white hover:bg-white/20 md:border-primary/30 md:bg-card md:text-foreground md:backdrop-blur-none md:hover:border-primary transition-colors"
               >
                 Reserveer een tafel
               </Link>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="blob bg-secondary/35 -left-6 -top-6 h-40 w-40 hidden md:block" />
-            <div className="blob bg-[color:var(--terracotta)]/20 -right-4 -bottom-6 h-32 w-32 hidden md:block" />
+          <div className="relative hidden md:block">
+            <div className="blob bg-secondary/35 -left-6 -top-6 h-40 w-40" />
+            <div className="blob bg-[color:var(--terracotta)]/20 -right-4 -bottom-6 h-32 w-32" />
             <div className="relative overflow-hidden rounded-[28px] shadow-[0_20px_60px_-30px_rgba(60,55,30,0.45)]">
               <img
                 src={heroImg}
@@ -79,20 +89,20 @@ function HomePage() {
 
       {/* USPs */}
       <section className="border-y border-border/60 bg-card/60">
-        <div className="container-prose grid gap-8 py-12 md:grid-cols-3">
+        <div className="container-prose grid grid-cols-3 gap-4 py-10 md:gap-8 md:py-12">
           {[
             { icon: Leaf, title: "Vers & lokaal", text: "Groente van Westlandse telers, brood van de bakker uit de straat." },
-            { icon: Heart, title: "Met de hand", text: "Soep, taart en limonade — alles huisgemaakt in onze keuken." },
+            { icon: Heart, title: "Met de hand", text: "Soep, taart en limonade, alles huisgemaakt in onze keuken." },
             { icon: Coffee, title: "Goede koffie", text: "Bonen van branderij Stielman, gezet door iemand die er om geeft." },
           ].map((u, i) => (
             <Reveal key={u.title} delay={i * 80}>
-              <div className="flex items-start gap-4">
-                <span className="grid place-items-center rounded-full bg-primary/10 p-3 text-primary">
-                  <u.icon className="h-5 w-5" />
+              <div className="flex flex-col items-center gap-2 text-center md:flex-row md:items-start md:gap-4 md:text-left">
+                <span className="grid place-items-center rounded-full bg-primary/10 p-2.5 md:p-3 text-primary shrink-0">
+                  <u.icon className="h-4 w-4 md:h-5 md:w-5" />
                 </span>
                 <div>
-                  <h3 className="font-serif text-xl text-foreground">{u.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{u.text}</p>
+                  <h3 className="font-serif text-sm leading-snug md:text-xl text-foreground">{u.title}</h3>
+                  <p className="mt-0.5 text-xs leading-snug text-muted-foreground md:text-sm">{u.text}</p>
                 </div>
               </div>
             </Reveal>
@@ -112,7 +122,7 @@ function HomePage() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-4">
+        <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4">
           {[
             { src: food1, alt: "Avocado toast met gepocheerd ei", tall: true },
             { src: sfeer1, alt: "Barista zet een flat white" },
@@ -130,7 +140,7 @@ function HomePage() {
                   width={1000}
                   height={img.tall ? 1400 : 800}
                   className={`w-full object-cover transition-transform duration-700 hover:scale-[1.04] ${
-                    img.tall ? "h-full min-h-[300px]" : "h-48 md:h-56"
+                    img.tall ? "h-full min-h-[220px] md:min-h-[280px]" : "h-36 md:h-44"
                   }`}
                 />
               </div>
@@ -139,7 +149,7 @@ function HomePage() {
         </div>
       </section>
 
-      {/* OVER FAY (kort) */}
+      {/* OVER (kort) */}
       <section className="bg-card/60 border-y border-border/60">
         <div className="container-prose grid gap-12 py-20 md:grid-cols-[5fr_7fr] md:items-center">
           <Reveal>
@@ -162,14 +172,14 @@ function HomePage() {
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
               Rosi opende op Koningsdag 2026 in het hart van Monster. Geen
-              ingewikkelde concepten — gewoon goede ingrediënten, een fijne
+              ingewikkelde concepten, gewoon goede ingrediënten, een fijne
               plek en de tijd nemen voor iedereen die binnenkomt.
             </p>
             <blockquote className="mt-8 border-l-2 border-primary/60 pl-5 font-serif italic text-xl text-foreground">
               "We wilden de plek zijn waar je tussen de middag écht even uit de
               ren stapt."
               <footer className="mt-2 text-sm not-italic font-sans text-muted-foreground">
-                — Fay Roos
+                Fay Roos
               </footer>
             </blockquote>
             <Link
@@ -190,13 +200,13 @@ function HomePage() {
             <h2 className="mt-3 font-serif text-4xl text-foreground">Wanneer je langs kunt komen</h2>
             <ul className="mt-6 divide-y divide-border/60 text-base">
               {[
-                ["Maandag", "08:30 – 17:00"],
-                ["Dinsdag", "08:30 – 17:00"],
-                ["Woensdag", "08:30 – 17:00"],
-                ["Donderdag", "08:30 – 17:00"],
-                ["Vrijdag", "08:30 – 17:00"],
-                ["Zaterdag", "09:00 – 17:00"],
-                ["Zondag", "10:00 – 16:00"],
+                ["Maandag", "08:30 - 17:00"],
+                ["Dinsdag", "08:30 - 17:00"],
+                ["Woensdag", "08:30 - 17:00"],
+                ["Donderdag", "08:30 - 17:00"],
+                ["Vrijdag", "08:30 - 17:00"],
+                ["Zaterdag", "09:00 - 17:00"],
+                ["Zondag", "10:00 - 16:00"],
               ].map(([d, h]) => (
                 <li key={d} className="flex items-center justify-between py-3">
                   <span>{d}</span>
@@ -210,7 +220,7 @@ function HomePage() {
             <div className="rounded-[28px] bg-primary p-10 text-primary-foreground">
               <h3 className="font-serif text-3xl">Kom langs in Monster</h3>
               <p className="mt-3 text-primary-foreground/85">
-                Choorstraat 12, Monster. Geen reservering nodig — maar wel zo
+                Choorstraat 12, Monster. Geen reservering nodig, maar wel zo
                 fijn als je met meer dan vier mensen komt.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">

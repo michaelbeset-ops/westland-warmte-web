@@ -23,15 +23,15 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-300 ${
+      className={`fixed md:sticky top-0 z-50 w-full transition-colors duration-300 ${
         scrolled ? "bg-background/85 backdrop-blur border-b border-border/60" : "bg-transparent"
       }`}
     >
       <div className="container-prose flex items-center justify-between py-4">
         <Link to="/" className="flex items-baseline gap-2 group">
-          <span className="font-serif text-2xl tracking-tight text-primary">Rosi</span>
+          <span className="font-serif text-xl tracking-tight text-primary">Lunchroom Rosi</span>
           <span className="text-xs uppercase tracking-[0.22em] text-muted-foreground hidden sm:inline">
-            Lunchroom · Monster
+            Monster
           </span>
         </Link>
 

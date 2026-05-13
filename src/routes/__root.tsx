@@ -59,10 +59,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lunchroom Rosi — Verse koffie & lunch in Monster" },
+      { title: "Lunchroom Rosi | Verse koffie & lunch in Monster" },
       { name: "description", content: "Lunchroom Rosi in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, en een warm welkom." },
       { name: "theme-color", content: "#6B7A4A" },
-      { property: "og:title", content: "Lunchroom Rosi — Monster" },
+      { property: "og:title", content: "Lunchroom Rosi | Monster" },
       { property: "og:description", content: "Een knus hoekje in Monster met verse koffie, lunch en huisgemaakt gebak." },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Lunchroom Rosi" },
@@ -102,7 +102,7 @@ function RootComponent() {
       <HeadContent />
       <div className="flex min-h-screen flex-col">
         <Header />
-        <main className="flex-1">
+        <main className="flex-1 pt-16 md:pt-0">
           <Outlet />
         </main>
         <Footer />

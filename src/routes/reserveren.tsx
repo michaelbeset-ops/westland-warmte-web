@@ -7,9 +7,9 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/reserveren")({
   head: () => ({
     meta: [
-      { title: "Reserveren — Lunchroom Rosi Monster" },
+      { title: "Reserveren | Lunchroom Rosi Monster" },
       { name: "description", content: "Reserveer eenvoudig een tafel bij Lunchroom Rosi in Monster. Voor lunch, koffie of een gezellige middag met taart." },
-      { property: "og:title", content: "Reserveren — Lunchroom Rosi" },
+      { property: "og:title", content: "Reserveren | Lunchroom Rosi" },
       { property: "og:description", content: "Reserveer een tafel bij Rosi in Monster." },
       { property: "og:url", content: "/reserveren" },
     ],
@@ -50,7 +50,7 @@ function ReserverenPage() {
     const body = encodeURIComponent(
       `Naam: ${name}\nE-mail: ${email}\nTelefoon: ${phone}\nDatum: ${date}\nTijd: ${time}\nPersonen: ${guests}\nOpmerking: ${note}`
     );
-    const subject = encodeURIComponent(`Reservering ${name} — ${date} ${time}`);
+    const subject = encodeURIComponent(`Reservering ${name} ${date} ${time}`);
     window.location.href = `mailto:hallo@lunchroomrosi.nl?subject=${subject}&body=${body}`;
     setSubmitted(true);
   }
@@ -64,7 +64,7 @@ function ReserverenPage() {
         </h1>
         <p className="mx-auto mt-5 max-w-xl text-muted-foreground">
           Vul het formulier in en wij sturen je per mail of telefoon een
-          bevestiging — meestal binnen een paar uur.
+          bevestiging, meestal binnen een paar uur.
         </p>
         <WaveDivider className="mt-8 mx-auto max-w-[160px]" />
       </section>
