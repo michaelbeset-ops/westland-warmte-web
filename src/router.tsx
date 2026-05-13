@@ -7,7 +7,7 @@ export const getRouter = () => {
 
   const router = createRouter({
     routeTree,
-    basepath: "/westland-warmte-web",
+    basepath: "/lunchroom-rosi",
     context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0,

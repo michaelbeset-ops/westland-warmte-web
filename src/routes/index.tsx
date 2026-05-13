@@ -33,11 +33,11 @@ function HomePage() {
         {/* Mobile: volledige achtergrond foto */}
         <div className="absolute inset-0 md:hidden" aria-hidden="true">
           <img
-            src={heroImg}
+            src={sfeer2}
             alt=""
             className="h-full w-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/35 to-black/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/75" />
         </div>
 
         <div className="relative z-10 container-prose grid gap-10 min-h-[100svh] content-end pb-14 md:min-h-0 md:content-normal md:pt-16 md:pb-24 md:grid-cols-2 md:items-center">
