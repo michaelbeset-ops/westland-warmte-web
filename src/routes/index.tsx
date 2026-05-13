@@ -40,9 +40,9 @@ function HomePage() {
               <span className="italic text-primary">in het hart</span> van Monster.
             </h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Verse koffie, broodjes van de bakker om de hoek en taart die Fay
-              die ochtend nog uit de oven haalde. Loop binnen, schuif aan, blijf
-              even.
+              Verse koffie, broodjes van de bakker om de hoek en taart die we
+              die ochtend nog uit de oven haalden. Loop binnen, schuif aan,
+              blijf even.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
