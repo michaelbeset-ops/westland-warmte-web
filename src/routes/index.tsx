@@ -15,7 +15,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Lunchroom Rosi — Verse koffie & lunch in Monster" },
-      { name: "description", content: "Een knus hoekje in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, een warm welkom van Fay." },
+      { name: "description", content: "Een knus hoekje in het hart van Monster. Verse koffie, huisgemaakte lunch en taart, en een warm welkom." },
       { property: "og:title", content: "Lunchroom Rosi — Monster" },
       { property: "og:description", content: "Verse koffie, lunch en huisgemaakt gebak in Monster." },
       { property: "og:url", content: "/" },
@@ -40,9 +40,9 @@ function HomePage() {
               <span className="italic text-primary">in het hart</span> van Monster.
             </h1>
             <p className="mt-6 max-w-md text-base leading-relaxed text-muted-foreground">
-              Verse koffie, broodjes van de bakker om de hoek en taart die Fay
-              die ochtend nog uit de oven haalde. Loop binnen, schuif aan, blijf
-              even.
+              Verse koffie, broodjes van de bakker om de hoek en taart die we
+              die ochtend nog uit de oven haalden. Loop binnen, schuif aan,
+              blijf even.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
@@ -147,7 +147,7 @@ function HomePage() {
               <div className="blob bg-secondary/30 -left-4 -top-4 h-28 w-28" />
               <img
                 src={fayImg}
-                alt="Fay Roos, eigenaresse van Lunchroom Rosi"
+                alt="In de lunchroom van Rosi"
                 loading="lazy"
                 width={1000}
                 height={1200}
@@ -158,16 +158,15 @@ function HomePage() {
           <Reveal delay={120}>
             <p className="text-xs uppercase tracking-[0.28em] text-primary/80">Even kennismaken</p>
             <h2 className="mt-3 font-serif text-4xl text-foreground sm:text-5xl">
-              Fay achter de toonbank.
+              Een buurtzaak met een verhaal.
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground">
-              Op Koningsdag 2026 opende Fay (23) de deuren van Rosi. Opgegroeid
-              in Monster, altijd al gek op koken voor anderen. Geen ingewikkelde
-              concepten — gewoon goede ingrediënten, een fijne plek en de tijd
-              nemen voor iedereen die binnenkomt.
+              Rosi opende op Koningsdag 2026 in het hart van Monster. Geen
+              ingewikkelde concepten — gewoon goede ingrediënten, een fijne
+              plek en de tijd nemen voor iedereen die binnenkomt.
             </p>
             <blockquote className="mt-8 border-l-2 border-primary/60 pl-5 font-serif italic text-xl text-foreground">
-              "Ik wilde de plek zijn waar je tussen de middag écht even uit de
+              "We wilden de plek zijn waar je tussen de middag écht even uit de
               ren stapt."
               <footer className="mt-2 text-sm not-italic font-sans text-muted-foreground">
                 — Fay Roos

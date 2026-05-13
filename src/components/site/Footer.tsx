@@ -10,7 +10,7 @@ export function Footer() {
           <p className="font-serif text-2xl text-primary">Lunchroom Rosi</p>
           <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
             Een knus hoekje in het hart van Monster. Verse koffie, huisgemaakte
-            lekkernijen en een warm welkom van Fay.
+            lekkernijen en een warm welkom.
           </p>
         </div>
 
