@@ -27,7 +27,7 @@ export const menu: MenuCategory[] = [
     id: "lunch",
     title: "Lunch",
     items: [
-      { name: "Tomatensoep van Fay", description: "Met verse basilicum en een geroosterd broodje", price: "6,75" },
+      { name: "Tomatensoep van het huis", description: "Met verse basilicum en een geroosterd broodje", price: "6,75" },
       { name: "Quiche van de dag", description: "Wisselende vulling, gestoomde groene salade", price: "10,50" },
       { name: "Burrata salade", description: "Westlandse tomaat, basilicum, olijfolie en zuurdesem", price: "12,50" },
       { name: "Uitsmijter ham & kaas", description: "Drie eieren op desembrood, met augurk", price: "9,25" },
